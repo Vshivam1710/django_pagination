@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'sites/images/favicon.ico' %}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'sites/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'sites/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+    <title>
+        {% block title %}
+            Django Pagination
+        {% endblock %}
+    </title>
+  </head>
+  <body>
+      <div class="container">
+          {% block content %}
+          {% endblock %}
+      </div>
+
+    <script src="{% static 'sites/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'sites/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'sites/js/jquery-3.6.0.min.js' %}"></script>
+    {% block JavaScript %}
+    {% endblock %}
+  </body>
+</html>
