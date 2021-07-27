@@ -11,7 +11,7 @@ Django Pagination - Home
             Django Pagination
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-12 h1 text-center mt-2 border-warning border-5 border-bottom">
             Add User Information
@@ -28,12 +28,12 @@ Django Pagination - Home
                     <label for="l_name" class="form-label">Last Name</label>
                     <input type="text" class="form-control" name="l_name" id="l_name" required>
                 </div>
-                
+
                 <div class="col-md-4">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" name="email" id="email" required>
                 </div>
-                
+
                 <div class="col-12">
                     <div class="d-grid gap-2">
                         <button class="btn btn-outline-success" type="submit">Save</button>
@@ -42,7 +42,7 @@ Django Pagination - Home
               </form>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-12 h1 text-center mt-2">
             User Data
@@ -90,9 +90,9 @@ Django Pagination - Home
                 {% endfor %}
             </tbody>
         </table>
-          
+
         {% if users.has_other_pages %}
-            <nav aria-label="Page navigation example">
+            <nav aria-label="Page navigation example" class="col-sm-12">
                 <ul class="pagination justify-content-center">
                     <li class="page-item {% if users.has_previous is False %}disabled{% endif %}">
                         <a class="page-link" href="?page={% if users.has_previous is True %}{{ users.previous_page_number }}{% else %}javascript:void(0);{% endif %}" tabindex="-1" aria-disabled="true">Previous</a>
